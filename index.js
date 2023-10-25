@@ -26,7 +26,7 @@ async function listDB(client) {
     const results = await cursor.toArray();
     results.forEach((result, i) => {
         date = new Date(result.last_review).toDateString();
-        console.log(`_id: ${result.name}`);
+        console.log(`_id:${result._id} ${result.name}`);
 
     })
 
